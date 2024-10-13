@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-10-12T15:24:41.206120" rpa="false" schemaversion="5">
+<suite id="s1" name="Example" source="c:\Users\Jedit\Documents\CAMT_robot\homework\Camt-cmu-mobile-automation\example.robot">
+<test id="s1-t1" name="Open CAMT APPLICATION" line="15">
+<kw name="Input Username">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>&amp;{ANDROID_DEVICE}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-10-12T15:24:41.867786" elapsed="6.545088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=${login.txt_username}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:48.413873" elapsed="1.466708"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-12T15:24:49.886613" level="INFO">Typing text 'standard_user' into text field 'accessibility_id=test-Username'</msg>
+<arg>locator=${login.txt_username}</arg>
+<arg>text=${USER}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-12T15:24:49.880581" elapsed="0.101004"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2024-10-12T15:24:41.863784" elapsed="8.118800"/>
+</kw>
+<kw name="Input Password">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=${login.txt_password}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:49.987606" elapsed="0.537330"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-12T15:24:50.530933" level="INFO">Typing text 'secret_sauce' into text field 'accessibility_id=test-Password'</msg>
+<arg>locator=${login.txt_password}</arg>
+<arg>text=${PASS}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-12T15:24:50.525934" elapsed="0.574037"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-10-12T15:24:49.984583" elapsed="1.116385"/>
+</kw>
+<kw name="Click Login button">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=${login.btn_login}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:51.105977" elapsed="0.537448"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-12T15:24:51.649426" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<arg>locator=${login.btn_login}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-12T15:24:51.643425" elapsed="0.143309"/>
+</kw>
+<status status="PASS" start="2024-10-12T15:24:51.102969" elapsed="0.684744"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=android=new UiSelector().description("test-Cart drop zone").childSelector(new UiSelector().text("PRODUCTS"))</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:51.788713" elapsed="1.269086"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=accessibility_id=test-Menu</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:53.058799" elapsed="0.092517"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-12T15:24:53.158316" level="INFO">Clicking element 'accessibility_id=test-Menu'.</msg>
+<arg>locator=accessibility_id=test-Menu</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-12T15:24:53.152316" elapsed="0.142031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=accessibility_id=test-WEBVIEW</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:53.295347" elapsed="1.657701"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-12T15:24:54.962078" level="INFO">Clicking element 'accessibility_id=test-WEBVIEW'.</msg>
+<arg>locator=accessibility_id=test-WEBVIEW</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-12T15:24:54.954046" elapsed="0.140568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>locator=accessibility_id=test-enter a https url here...</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-12T15:24:55.095607" elapsed="1.625049"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-12T15:24:56.727655" level="INFO">Typing text 'https://google.com' into text field 'accessibility_id=test-enter a https url here...'</msg>
+<arg>locator=accessibility_id=test-enter a https url here...</arg>
+<arg>text=https://google.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-12T15:24:56.722663" elapsed="0.809338"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-12T15:25:02.536638" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-12T15:24:57.534002" elapsed="5.002636"/>
+</kw>
+<status status="PASS" start="2024-10-12T15:24:41.858751" elapsed="20.679860"/>
+</test>
+<status status="PASS" start="2024-10-12T15:24:41.228121" elapsed="21.314523"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Example">Example</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

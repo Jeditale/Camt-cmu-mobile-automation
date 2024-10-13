@@ -1,0 +1,7 @@
+ANDROID_DEVICE:
+  platformName: android
+  automationName: uiautomator2
+  deviceName: emulator-5554
+  platformVersion: '12'
+  app: C:/Users/Jedit/Documents/CAMT_robot/homework/Camt-cmu-mobile-automation/camt.apk
+  appWaitActivity: com.swaglabsmobileapp.MainActivity
